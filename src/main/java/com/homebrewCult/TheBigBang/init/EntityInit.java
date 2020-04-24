@@ -72,89 +72,63 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod.EventBusSubscriber(modid = TheBigBang.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(TheBigBang.MODID)
 public class EntityInit {
-	
-	@SuppressWarnings("unchecked")
-	public static EntityType<StumpEntity> STUMP_ENTITY = (EntityType<StumpEntity>) registerEntityType(StumpEntity::new, EntityClassification.CREATURE, 1f, 1.5f, "stump_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<OctopusEntity> OCTOPUS_ENTITY = (EntityType<OctopusEntity>) registerEntityType(OctopusEntity::new, EntityClassification.CREATURE, 1f, 2.5f, "octopus_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<EvilEyeEntity> EVIL_EYE_ENTITY = (EntityType<EvilEyeEntity>) registerEntityType(EvilEyeEntity::new, EntityClassification.MONSTER, 1.2f, 1f, "evil_eye_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<CurseEyeEntity> CURSE_EYE_ENTITY = (EntityType<CurseEyeEntity>) registerEntityType(CurseEyeEntity::new, EntityClassification.MONSTER, 1.2f, 1f, "curse_eye_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<ColdEyeEntity> COLD_EYE_ENTITY = (EntityType<ColdEyeEntity>) registerEntityType(ColdEyeEntity::new, EntityClassification.MONSTER, 1.2f, 1f, "cold_eye_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<OrangeMushroomEntity> ORANGE_MUSHROOM_ENTITY = (EntityType<OrangeMushroomEntity>) registerEntityType(OrangeMushroomEntity::new, EntityClassification.CREATURE, 1f, 1.4f, "orange_mushroom_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<BlueMushroomEntity> BLUE_MUSHROOM_ENTITY = (EntityType<BlueMushroomEntity>) registerEntityType(BlueMushroomEntity::new, EntityClassification.CREATURE, 1f, 1.4f, "blue_mushroom_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<ZombieMushroomEntity> ZOMBIE_MUSHROOM_ENTITY = (EntityType<ZombieMushroomEntity>) registerEntityType(ZombieMushroomEntity::new, EntityClassification.CREATURE, 1f, 1.4f, "zombie_mushroom_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<JrYetiEntity> JRYETI_ENTITY = (EntityType<JrYetiEntity>) registerEntityType(JrYetiEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "jryeti_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<DarkJrYetiEntity> DARK_JRYETI_ENTITY = (EntityType<DarkJrYetiEntity>) registerEntityType(DarkJrYetiEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "dark_jryeti_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<GreenSnailEntity> GREEN_SNAIL_ENTITY = (EntityType<GreenSnailEntity>) registerEntityType(GreenSnailEntity::new, EntityClassification.CREATURE, 0.6f, 0.5f, "green_snail_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<BlueSnailEntity> BLUE_SNAIL_ENTITY = (EntityType<BlueSnailEntity>) registerEntityType(BlueSnailEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "blue_snail_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<RedSnailEntity> RED_SNAIL_ENTITY = (EntityType<RedSnailEntity>) registerEntityType(RedSnailEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "red_snail_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<RibbonPigEntity> RIBBON_PIG_ENTITY = (EntityType<RibbonPigEntity>) registerEntityType(RibbonPigEntity::new, EntityClassification.CREATURE, 1.6f, 1f, "ribbon_pig_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<StoneGolemEntity> STONE_GOLEM_ENTITY = (EntityType<StoneGolemEntity>) registerEntityType(StoneGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "stone_golem_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<DarkStoneGolemEntity> DARK_STONE_GOLEM_ENTITY = (EntityType<DarkStoneGolemEntity>) registerEntityType(DarkStoneGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "dark_stone_golem_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<MixedGolemEntity> MIXED_GOLEM_ENTITY = (EntityType<MixedGolemEntity>) registerEntityType(MixedGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "mixed_golem_entity");	
-	@SuppressWarnings("unchecked")
-	public static EntityType<IceGolemEntity> ICE_GOLEM_ENTITY = (EntityType<IceGolemEntity>) registerEntityType(IceGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "ice_golem_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<FireGolemEntity> FIRE_GOLEM_ENTITY = (EntityType<FireGolemEntity>) registerEntityType(FireGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "fire_golem_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<DrakeEntity> DRAKE_ENTITY = (EntityType<DrakeEntity>) registerEntityType(DrakeEntity::new, EntityClassification.CREATURE, 1.8f, 2f, "drake_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<CopperDrakeEntity> COPPER_DRAKE_ENTITY = (EntityType<CopperDrakeEntity>) registerEntityType(CopperDrakeEntity::new, EntityClassification.CREATURE, 1.8f, 2f, "copper_drake_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<DarkDrakeEntity> DARK_DRAKE_ENTITY = (EntityType<DarkDrakeEntity>) registerEntityType(DarkDrakeEntity::new, EntityClassification.MONSTER, 1.8f, 2f, "dark_drake_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<IceDrakeEntity> ICE_DRAKE_ENTITY = (EntityType<IceDrakeEntity>) registerEntityType(IceDrakeEntity::new, EntityClassification.MONSTER, 1.8f, 2f, "ice_drake_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<RedDrakeEntity> RED_DRAKE_ENTITY = (EntityType<RedDrakeEntity>) registerEntityType(RedDrakeEntity::new, EntityClassification.MONSTER, 1.8f, 2f, "red_drake_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<YetiEntity> YETI_ENTITY = (EntityType<YetiEntity>) registerEntityType(YetiEntity::new, EntityClassification.MONSTER, 2f, 3f, "yeti_entity");
-	@SuppressWarnings("unchecked")
-	public static EntityType<DarkYetiEntity> DARK_YETI_ENTITY = (EntityType<DarkYetiEntity>) registerEntityType(DarkYetiEntity::new, EntityClassification.MONSTER, 2f, 3f, "dark_yeti_entity");
+	public static final EntityType<StumpEntity> STUMP_ENTITY = null;
+	public static final EntityType<OctopusEntity> OCTOPUS_ENTITY = null;
+	public static final EntityType<EvilEyeEntity> EVIL_EYE_ENTITY = null;	
+	public static final EntityType<CurseEyeEntity> CURSE_EYE_ENTITY = null;
+	public static final EntityType<ColdEyeEntity> COLD_EYE_ENTITY = null;
+	public static final EntityType<OrangeMushroomEntity> ORANGE_MUSHROOM_ENTITY = null;
+	public static final EntityType<BlueMushroomEntity> BLUE_MUSHROOM_ENTITY = null;
+	public static final EntityType<ZombieMushroomEntity> ZOMBIE_MUSHROOM_ENTITY = null;
+	public static final EntityType<JrYetiEntity> JRYETI_ENTITY = null;
+	public static final EntityType<DarkJrYetiEntity> DARK_JRYETI_ENTITY = null;
+	public static final EntityType<GreenSnailEntity> GREEN_SNAIL_ENTITY = null;
+	public static final EntityType<BlueSnailEntity> BLUE_SNAIL_ENTITY = null;
+	public static final EntityType<RedSnailEntity> RED_SNAIL_ENTITY = null;
+	public static final EntityType<RibbonPigEntity> RIBBON_PIG_ENTITY = null;
+	public static final EntityType<StoneGolemEntity> STONE_GOLEM_ENTITY = null;
+	public static final EntityType<DarkStoneGolemEntity> DARK_STONE_GOLEM_ENTITY = null;
+	public static final EntityType<MixedGolemEntity> MIXED_GOLEM_ENTITY = null;
+	public static final EntityType<IceGolemEntity> ICE_GOLEM_ENTITY = null;
+	public static final EntityType<FireGolemEntity> FIRE_GOLEM_ENTITY = null;
+	public static final EntityType<DrakeEntity> DRAKE_ENTITY = null;
+	public static final EntityType<CopperDrakeEntity> COPPER_DRAKE_ENTITY = null;
+	public static final EntityType<DarkDrakeEntity> DARK_DRAKE_ENTITY = null;
+	public static final EntityType<IceDrakeEntity> ICE_DRAKE_ENTITY = null;
+	public static final EntityType<RedDrakeEntity> RED_DRAKE_ENTITY = null;
+	public static final EntityType<YetiEntity> YETI_ENTITY = null;
+	public static final EntityType<DarkYetiEntity> DARK_YETI_ENTITY = null;
 
+	@SuppressWarnings("unchecked")
 	@SubscribeEvent
 	public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
 		event.getRegistry().registerAll (
-			STUMP_ENTITY,
-			OCTOPUS_ENTITY,
-			EVIL_EYE_ENTITY ,
-			CURSE_EYE_ENTITY,
-			COLD_EYE_ENTITY,
-			ORANGE_MUSHROOM_ENTITY,
-			BLUE_MUSHROOM_ENTITY,
-			ZOMBIE_MUSHROOM_ENTITY,
-			JRYETI_ENTITY,
-			DARK_JRYETI_ENTITY,
-			GREEN_SNAIL_ENTITY,
-			BLUE_SNAIL_ENTITY,
-			RED_SNAIL_ENTITY,
-			RIBBON_PIG_ENTITY,
-			STONE_GOLEM_ENTITY,
-			DARK_STONE_GOLEM_ENTITY,
-			MIXED_GOLEM_ENTITY,
-			ICE_GOLEM_ENTITY,
-			FIRE_GOLEM_ENTITY,
-			DRAKE_ENTITY,
-			COPPER_DRAKE_ENTITY,
-			DARK_DRAKE_ENTITY,
-			ICE_DRAKE_ENTITY,
-			RED_DRAKE_ENTITY,
-			YETI_ENTITY,
-			DARK_YETI_ENTITY
+			(EntityType<StumpEntity>) registerEntityType(StumpEntity::new, EntityClassification.CREATURE, 1f, 1.5f, "stump_entity"),
+			(EntityType<OctopusEntity>)registerEntityType(OctopusEntity::new, EntityClassification.CREATURE, 1f, 2.5f, "octopus_entity"),	
+			(EntityType<EvilEyeEntity>)registerEntityType(EvilEyeEntity::new, EntityClassification.MONSTER, 1.2f, 1f, "evil_eye_entity"),
+			(EntityType<CurseEyeEntity>)registerEntityType(CurseEyeEntity::new, EntityClassification.MONSTER, 1.2f, 1f, "curse_eye_entity"),
+			(EntityType<ColdEyeEntity>)registerEntityType(ColdEyeEntity::new, EntityClassification.MONSTER, 1.2f, 1f, "cold_eye_entity"),
+			(EntityType<OrangeMushroomEntity>)registerEntityType(OrangeMushroomEntity::new, EntityClassification.CREATURE, 1f, 1.4f, "orange_mushroom_entity"),
+			(EntityType<BlueMushroomEntity>)registerEntityType(BlueMushroomEntity::new, EntityClassification.CREATURE, 1f, 1.4f, "blue_mushroom_entity"),
+			(EntityType<ZombieMushroomEntity>)registerEntityType(ZombieMushroomEntity::new, EntityClassification.CREATURE, 1f, 1.4f, "zombie_mushroom_entity"),
+			(EntityType<JrYetiEntity>)registerEntityType(JrYetiEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "jryeti_entity"),
+			(EntityType<DarkJrYetiEntity>)registerEntityType(DarkJrYetiEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "dark_jryeti_entity"),	
+			(EntityType<GreenSnailEntity>)registerEntityType(GreenSnailEntity::new, EntityClassification.CREATURE, 0.6f, 0.5f, "green_snail_entity"),	
+			(EntityType<BlueSnailEntity>)registerEntityType(BlueSnailEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "blue_snail_entity"),	
+			(EntityType<RedSnailEntity>)registerEntityType(RedSnailEntity::new, EntityClassification.CREATURE, 0.8f, 0.8f, "red_snail_entity"),	
+			(EntityType<RibbonPigEntity>)registerEntityType(RibbonPigEntity::new, EntityClassification.CREATURE, 1.6f, 1f, "ribbon_pig_entity"),
+			(EntityType<StoneGolemEntity>)registerEntityType(StoneGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "stone_golem_entity"),
+			(EntityType<DarkStoneGolemEntity>)registerEntityType(DarkStoneGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "dark_stone_golem_entity"),
+			(EntityType<MixedGolemEntity>)registerEntityType(MixedGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "mixed_golem_entity"),	
+			(EntityType<IceGolemEntity>)registerEntityType(IceGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "ice_golem_entity"),
+			(EntityType<FireGolemEntity>)registerEntityType(FireGolemEntity::new, EntityClassification.CREATURE, 1.4f, 3.6f, "fire_golem_entity"),
+			(EntityType<DrakeEntity>)registerEntityType(DrakeEntity::new, EntityClassification.CREATURE, 1.8f, 2f, "drake_entity"),
+			(EntityType<CopperDrakeEntity>)registerEntityType(CopperDrakeEntity::new, EntityClassification.CREATURE, 1.8f, 2f, "copper_drake_entity"),
+			(EntityType<DarkDrakeEntity>)registerEntityType(DarkDrakeEntity::new, EntityClassification.MONSTER, 1.8f, 2f, "dark_drake_entity"),
+			(EntityType<IceDrakeEntity>)registerEntityType(IceDrakeEntity::new, EntityClassification.MONSTER, 1.8f, 2f, "ice_drake_entity"),
+			(EntityType<RedDrakeEntity>)registerEntityType(RedDrakeEntity::new, EntityClassification.MONSTER, 1.8f, 2f, "red_drake_entity"),
+			(EntityType<YetiEntity>)registerEntityType(YetiEntity::new, EntityClassification.MONSTER, 2f, 3f, "yeti_entity"),
+			(EntityType<DarkYetiEntity>)registerEntityType(DarkYetiEntity::new, EntityClassification.MONSTER, 2f, 3f, "dark_yeti_entity")
 		);
 		
 		registerEntityWorldSpawn(STUMP_ENTITY, 2, 4, Biomes.FOREST);
@@ -173,33 +147,45 @@ public class EntityInit {
 		registerEntityWorldSpawn(RIBBON_PIG_ENTITY, 2, 8, Biomes.BEACH);
 	}
 	
+    public static <T extends Entity> EntityType<?> registerEntityType(EntityType.IFactory<T> factoryIn, EntityClassification classification, float width, float height, String name) {
+		return EntityType.Builder.create(factoryIn, EntityClassification.CREATURE).size(width, height).build(TheBigBang.MODID + name).setRegistryName(TheBigBang.MODID, name);
+	}
+    
+	public static void registerEntityWorldSpawn(EntityType<?> entity, int minGroupCount, int maxGroupCount, Biome... biomes) {
+		for(Biome biome : biomes) {
+			if(biome != null) {
+				biome.getSpawns(entity.getClassification()).add(new SpawnListEntry(entity, 10, minGroupCount, maxGroupCount));
+			}
+		}
+	}	
+	
 	public static void registerEntityRenders() {
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<StumpEntity>)STUMP_ENTITY, new StumpRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<OctopusEntity>)OCTOPUS_ENTITY, new OctopusRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<EvilEyeEntity>)EVIL_EYE_ENTITY, new EvilEyeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<CurseEyeEntity>)CURSE_EYE_ENTITY, new CurseEyeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<ColdEyeEntity>)COLD_EYE_ENTITY, new ColdEyeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<OrangeMushroomEntity>)ORANGE_MUSHROOM_ENTITY, new OrangeMushroomRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<BlueMushroomEntity>)BLUE_MUSHROOM_ENTITY, new BlueMushroomRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<ZombieMushroomEntity>)ZOMBIE_MUSHROOM_ENTITY, new ZombieMushroomRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<GreenSnailEntity>)GREEN_SNAIL_ENTITY, new GreenSnailRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<BlueSnailEntity>)BLUE_SNAIL_ENTITY, new BlueSnailRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<RedSnailEntity>)RED_SNAIL_ENTITY, new RedSnailRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<JrYetiEntity>)JRYETI_ENTITY, new JrYetiRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<DarkJrYetiEntity>)DARK_JRYETI_ENTITY, new DarkJrYetiRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<RibbonPigEntity>)RIBBON_PIG_ENTITY, new RibbonPigRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<StoneGolemEntity>)STONE_GOLEM_ENTITY, new StoneGolemRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<DarkStoneGolemEntity>)DARK_STONE_GOLEM_ENTITY, new DarkStoneGolemRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<MixedGolemEntity>)MIXED_GOLEM_ENTITY, new MixedGolemRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<IceGolemEntity>)ICE_GOLEM_ENTITY, new IceGolemRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<FireGolemEntity>)FIRE_GOLEM_ENTITY, new FireGolemRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<DrakeEntity>)DRAKE_ENTITY, new DrakeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<CopperDrakeEntity>)COPPER_DRAKE_ENTITY, new CopperDrakeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<DarkDrakeEntity>)DARK_DRAKE_ENTITY, new DarkDrakeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<IceDrakeEntity>)ICE_DRAKE_ENTITY, new IceDrakeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<RedDrakeEntity>)RED_DRAKE_ENTITY, new RedDrakeRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<YetiEntity>)YETI_ENTITY, new YetiRenderer.RenderFactory());
-		RenderingRegistry.registerEntityRenderingHandler((EntityType<DarkYetiEntity>)DARK_YETI_ENTITY, new DarkYetiRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(STUMP_ENTITY, new StumpRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(OCTOPUS_ENTITY, new OctopusRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(EVIL_EYE_ENTITY, new EvilEyeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(CURSE_EYE_ENTITY, new CurseEyeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(COLD_EYE_ENTITY, new ColdEyeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(ORANGE_MUSHROOM_ENTITY, new OrangeMushroomRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(BLUE_MUSHROOM_ENTITY, new BlueMushroomRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(ZOMBIE_MUSHROOM_ENTITY, new ZombieMushroomRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(GREEN_SNAIL_ENTITY, new GreenSnailRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(BLUE_SNAIL_ENTITY, new BlueSnailRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(RED_SNAIL_ENTITY, new RedSnailRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(JRYETI_ENTITY, new JrYetiRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(DARK_JRYETI_ENTITY, new DarkJrYetiRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(RIBBON_PIG_ENTITY, new RibbonPigRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(STONE_GOLEM_ENTITY, new StoneGolemRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(DARK_STONE_GOLEM_ENTITY, new DarkStoneGolemRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(MIXED_GOLEM_ENTITY, new MixedGolemRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(ICE_GOLEM_ENTITY, new IceGolemRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(FIRE_GOLEM_ENTITY, new FireGolemRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(DRAKE_ENTITY, new DrakeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(COPPER_DRAKE_ENTITY, new CopperDrakeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(DARK_DRAKE_ENTITY, new DarkDrakeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(ICE_DRAKE_ENTITY, new IceDrakeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(RED_DRAKE_ENTITY, new RedDrakeRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(YETI_ENTITY, new YetiRenderer.RenderFactory());
+		RenderingRegistry.registerEntityRenderingHandler(DARK_YETI_ENTITY, new DarkYetiRenderer.RenderFactory());
 	}
 	
 	@SubscribeEvent
@@ -234,21 +220,9 @@ public class EntityInit {
 		);
 	}
 	
-    public static <T extends Entity> EntityType<?> registerEntityType(EntityType.IFactory<T> factoryIn, EntityClassification classification, float width, float height, String name) {
-		return EntityType.Builder.create(factoryIn, EntityClassification.CREATURE).size(width, height).build(TheBigBang.MODID + name).setRegistryName(TheBigBang.MODID, name);
-	}
-	
 	public static Item registerEntitySpawnEgg(EntityType<?> type, int color1, int color2, String name) {
 		SpawnEggItem item = new SpawnEggItem(type, color1, color2, new Item.Properties().group(ItemGroup.MISC));
 		item.setRegistryName(TheBigBang.MODID, name);
 		return item;
 	}
-	
-	public static void registerEntityWorldSpawn(EntityType<?> entity, int minGroupCount, int maxGroupCount, Biome... biomes) {
-		for(Biome biome : biomes) {
-			if(biome != null) {
-				biome.getSpawns(entity.getClassification()).add(new SpawnListEntry(entity, 10, minGroupCount, maxGroupCount));
-			}
-		}
-	}	
 }
